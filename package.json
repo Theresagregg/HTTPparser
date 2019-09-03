@@ -1,0 +1,11 @@
+{
+  "name": "httpparser",
+  "version": "1.0.0",
+  "description": "HTTPparser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tree",
+  "license": "ISC"
+}
