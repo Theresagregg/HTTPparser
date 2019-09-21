@@ -42,3 +42,16 @@ it('sets content-type headers', function(){
     }
     expect(output).toEqual(expected)
 })
+it('handles mulitple headers', function(){
+    const request = 'GET / HTTP/1.1\nContent-Type: text/html; charset=utf-8\nAccept-Language: en-US'
+
+    const output = parseHttp(request)
+    const expected = {
+        verb: 'GET',
+        path: '/',
+        version: 'HTTP/1.1',
+        headers: {'Content-Type': "text/html; charset=utf-8",
+    'Accept-Language': 'en-US'}
+    }
+    expect(output).toEqual(expected)
+})

@@ -12,10 +12,14 @@ module.exports = function parseHttp(request) {
 
 
     parsedMessage.headers = {}
-    const temp = lines[1].split(': ')
-    const key = temp[0]
-    const value = temp[1]
+for (let i = 1; i < lines.length; i++){
+    let temp = lines[i].split(': ')
+    let key = temp[0]
+    let value = temp[1]
     parsedMessage.headers[key] = value
+
+
+}
 
     return parsedMessage
 }
